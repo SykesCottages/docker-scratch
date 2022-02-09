@@ -6,6 +6,7 @@ RUN apt-get update && \
         php5.6-ldap \
         php5.6-redis \
         php5.6-gd \
+        php5.6-memcache \
         php-pear \
         librabbitmq-dev \
         libmcrypt-dev
