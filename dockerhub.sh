@@ -5,7 +5,7 @@ BRANCHES=( "php-7.0-mysql" "php-7.3-fpm-k" "php-5.6-fpm-e" "php-5.6-cli-e" "php-
 for BRANCH in "${BRANCHES[@]}"
 do
   git checkout $BRANCH
-  doocker build --no-cache -t sykescottages/scratch:$BRANCH .
+  docker build --no-cache -t sykescottages/scratch:$BRANCH .
   docker push sykescottages/scratch:${BRANCH}
 done
 
