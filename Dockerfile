@@ -16,6 +16,3 @@ RUN curl -L https://phar.phpunit.de/phpunit-7.phar > /usr/local/bin/phpunit && \
 
 RUN pecl install amqp && \
     echo "extension=amqp.so" > /etc/php/5.6/cli/conf.d/amqp.ini;
-
-# Enable Error Logs
-RUN echo "error_log = /dev/stderr" >> /etc/php/5.6/cli/cli.ini
