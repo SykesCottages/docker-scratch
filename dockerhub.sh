@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BRANCHES=( "php-7.0-mysql" "php-7.3-fpm-k" "php-5.6-fpm-e" "php-5.6-cli-e" "php-5.6-cli-t" "php-5.6-fpm-t" )
+BRANCHES=( "php-7.0-mysql" "php-7.3-fpm-k" "php-5.6-fpm-e" "php-5.6-cli-e" "php-5.6-cli-t" "php-5.6-fpm-t" "jq" )
 
 for BRANCH in "${BRANCHES[@]}"
 do
