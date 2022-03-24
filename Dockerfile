@@ -7,7 +7,8 @@ RUN apt-get update && \
         php5.6-gd \
         php-pear \
         librabbitmq-dev \
-        libmcrypt-dev
+        libmcrypt-dev \
+        wget
 
 # New Relic
  RUN echo 'deb http://apt.newrelic.com/debian/ newrelic non-free' | tee /etc/apt/sources.list.d/newrelic.list
