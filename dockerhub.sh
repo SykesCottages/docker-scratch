@@ -1,14 +1,14 @@
 #!/bin/bash
 
-BRANCHES=( "php-7.0-mysql" "php-7.3-fpm-k" "php-5.6-fpm-e" "php-5.6-cli-e" "php-5.6-cli-t" "php-5.6-fpm-t" "jq" )
+# You need to provide your own creds because #security
+docker login
 
-for BRANCH in "${BRANCHES[@]}"
+VERSIONS=( "php-7.0-mysql" "php-7.3-fpm-k" "php-5.6-fpm-e" "php-5.6-cli-e" "php-5.6-cli-t" "php-5.6-fpm-t" "jq" )
+
+for VERSION in "${VERSIONS[@]}"
 do
-  git checkout $BRANCH
-  git pull origin $BRANCH
-  docker build --no-cache -t sykescottages/scratch:$BRANCH .
-  docker push sykescottages/scratch:${BRANCH}
-  docker rmi sykescottages/scratch:${BRANCH}
-done
+  docker build --no-cache -t sykescottages/scratch:$VERSION $VERSION
+  docker push sykescottages/scratch:${VERSION}
 
-git checkout main
+  docker rmi sykescottages/scratch:${VERSION}
+done
