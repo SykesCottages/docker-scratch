@@ -5,6 +5,7 @@ RUN apt-get update && \
     apt-get install -y \
         php5.6-ldap \
         php5.6-redis \
+        php5.6-pspell \
         php5.6-gd \
         php5.6-mcrypt \
         php-pear \
