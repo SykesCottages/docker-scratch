@@ -15,6 +15,7 @@ RUN apt-get update && \
         libfontconfig \
         libxtst6 \
         xz-utils \
+        cron \
         wget
 
 # New Relic
@@ -38,3 +39,7 @@ RUN curl https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkh
 # Install AMQP
 RUN pecl install amqp && \
     echo "extension=amqp.so" > /etc/php/5.6/cli/conf.d/amqp.ini
+
+RUN apt-get autoremove -y -q && \
+    apt-get autoclean -y -q && \
+    rm -rf /var/lib/apt/lists/*
