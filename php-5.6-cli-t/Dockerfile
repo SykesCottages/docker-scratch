@@ -11,7 +11,8 @@ RUN apt-get update && \
         php-pear \
         librabbitmq-dev \
         libmcrypt-dev \
-        wget
+        wget \
+        cron
 
 # New Relic
  RUN echo 'deb http://apt.newrelic.com/debian/ newrelic non-free' | tee /etc/apt/sources.list.d/newrelic.list
