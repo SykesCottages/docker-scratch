@@ -16,6 +16,7 @@ RUN apt-get update && \
         libxtst6 \
         xz-utils \
         cron \
+        supervisor \
         wget
 
 # New Relic
