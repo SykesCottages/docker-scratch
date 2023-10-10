@@ -25,6 +25,6 @@ RUN curl -L https://phar.phpunit.de/phpunit-7.phar > /usr/local/bin/phpunit && \
     chmod +x /usr/local/bin/phpunit
 
 # Install AMQP
-RUN pecl install amqp && \
+RUN printf "\n" | pecl install amqp-1.11.0 && \
     echo "extension=amqp.so" > /etc/php/5.6/fpm/conf.d/amqp.ini && \
     echo "extension=amqp.so" > /etc/php/5.6/cli/conf.d/amqp.ini

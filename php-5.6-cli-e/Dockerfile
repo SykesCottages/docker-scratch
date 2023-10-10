@@ -38,7 +38,7 @@ RUN curl https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkh
     mv /usr/local/bin/wkhtmltopdf /usr/local/bin/wkhtmltopdf-amd64
 
 # Install AMQP
-RUN pecl install amqp && \
+RUN printf "\n" | pecl install amqp-1.11.0 && \
     echo "extension=amqp.so" > /etc/php/5.6/cli/conf.d/amqp.ini
 
 RUN apt-get autoremove -y -q && \
