@@ -21,9 +21,13 @@ RUN apt-get update && \
 # New Relic
 RUN curl -L "https://download.newrelic.com/php_agent/archive/10.11.0.3/newrelic-php5-10.11.0.3-linux.tar.gz" | tar -C /tmp -zx && \
    export NR_INSTALL_USE_CP_NOT_LN=1 && \
-    export NR_INSTALL_SILENT=1 && \
-     /tmp/newrelic-php5-*/newrelic-install install && \
-      rm -rf /tmp/newrelic-php5-* /tmp/nrinstall*
+   export NR_INSTALL_SILENT=1 && \
+   /tmp/newrelic-php5-*/newrelic-install install && \
+   rm -rf /tmp/newrelic-php5-* /tmp/nrinstall* && \
+   mv /etc/php/5.6/cli/conf.d/newrelic.ini /etc/php/5.6/mods-available/newrelic.ini && \
+   rm -rf /etc/php/5.6/fpm/conf.d/newrelic.ini && \
+   ln -s /etc/php/5.6/mods-available/newrelic.ini /etc/php/5.6/cli/conf.d/20-newrelic.ini && \
+   ln -s /etc/php/5.6/mods-available/newrelic.ini /etc/php/5.6/fpm/conf.d/20-newrelic.ini
 
 # Install PHP Unit
 RUN curl -L https://phar.phpunit.de/phpunit-7.phar > /usr/local/bin/phpunit && \
@@ -38,9 +42,11 @@ RUN curl https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkh
 
 # Install AMQP
 RUN printf "\n" | pecl install amqp-1.11.0 && \
-    echo "extension=amqp.so" > /etc/php/5.6/fpm/conf.d/amqp.ini && \
-    echo "extension=amqp.so" > /etc/php/5.6/cli/conf.d/amqp.ini
+    echo "extension=amqp.so" > /etc/php/5.6/mods-available/amqp.ini && \
+    ln -s /etc/php/5.6/mods-available/amqp.ini /etc/php/5.6/cli/conf.d/20-amqp.ini && \
+    ln -s /etc/php/5.6/mods-available/amqp.ini /etc/php/5.6/fpm/conf.d/20-amqp.ini
 
+# Cleanup
 RUN apt-get autoremove -y -q && \
     apt-get autoclean -y -q && \
     rm -rf /var/lib/apt/lists/*
