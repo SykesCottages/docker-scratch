@@ -19,11 +19,11 @@ RUN apt-get update && \
         wget
 
 # New Relic
-RUN echo 'deb http://apt.newrelic.com/debian/ newrelic non-free' | tee /etc/apt/sources.list.d/newrelic.list
-RUN wget -O- https://download.newrelic.com/548C16BF.gpg | apt-key add -
-
-RUN apt-get update && \
-    apt-get install -y newrelic-php5
+RUN curl -L "https://download.newrelic.com/php_agent/archive/10.11.0.3/newrelic-php5-10.11.0.3-linux.tar.gz" | tar -C /tmp -zx && \
+   export NR_INSTALL_USE_CP_NOT_LN=1 && \
+    export NR_INSTALL_SILENT=1 && \
+     /tmp/newrelic-php5-*/newrelic-install install && \
+      rm -rf /tmp/newrelic-php5-* /tmp/nrinstall*
 
 # Install PHP Unit
 RUN curl -L https://phar.phpunit.de/phpunit-7.phar > /usr/local/bin/phpunit && \
