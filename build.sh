@@ -1,9 +1,7 @@
 #!/bin/bash
 
 VERSION=$1
-ARCH=$2
 
-TAG="sykescottages/scratch:${VERSION}-${ARCH}"
-
-docker build --quiet --no-cache -t $TAG --build-arg ARCH=$ARCH $VERSION
+TAG="sykescottages/scratch:${VERSION}"
+docker build --quiet --no-cache -t $TAG --build-arg $VERSION
 docker push $TAG
