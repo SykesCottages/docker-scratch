@@ -1,4 +1,5 @@
-FROM sykescottages/php:5.6-cli
+ARG ARCH=amd64
+FROM sykescottages/php:5.6-cli-$ARCH
 
 # Install required dependencies
 RUN apt-get update && \

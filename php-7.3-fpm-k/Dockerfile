@@ -1,4 +1,5 @@
-FROM sykescottages/php:7.3-fpm
+ARG ARCH=amd64
+FROM sykescottages/php:7.3-fpm-$ARCH
 
 RUN apt-get -qq update && \
     apt-get -qq install -y \

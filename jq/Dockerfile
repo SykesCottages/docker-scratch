@@ -1,4 +1,5 @@
-FROM sykescottages/base
+ARG ARCH=amd64
+FROM sykescottages/base:ubuntu-22-04-$ARCH
 
 RUN apt update && \
     apt install -y jq

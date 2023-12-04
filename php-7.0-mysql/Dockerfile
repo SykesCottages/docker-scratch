@@ -1,4 +1,5 @@
-FROM sykescottages/php:7.0-cli
+ARG ARCH=amd64
+FROM sykescottages/php:7.0-cli-$ARCH
 
 ENV TZ=Europe/London
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
