@@ -3,5 +3,5 @@
 VERSION=$1
 
 TAG="sykescottages/scratch:${VERSION}"
-docker build --quiet --no-cache -t $TAG --build-arg $VERSION
+docker build --quiet --no-cache -t $TAG $VERSION
 docker push $TAG
