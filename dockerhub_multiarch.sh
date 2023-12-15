@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ARCH=$(arch)
+
 # You need to provide your own creds because #security
 docker login >> /dev/null 2>&1
 
