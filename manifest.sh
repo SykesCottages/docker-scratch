@@ -4,7 +4,7 @@ export DOCKER_CLI_EXPERIMENTAL=enabled
 
 docker login >>/dev/null 2>&1
 
-VERSIONS=( "php-5.6-fpm-e-dev" "node-12-e-dev" )
+VERSIONS=( "php-5.6-fpm-t-dev" "php-5.6-fpm-e-dev" "node-12-e-dev" )
 for VERSION in "${VERSIONS[@]}"
 do
   TAG="sykescottages/scratch:$VERSION"

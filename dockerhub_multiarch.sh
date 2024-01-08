@@ -14,7 +14,7 @@ else
   exit 1
 fi
 
-VERSIONS=( "php-5.6-fpm-e-dev" "node-12-e-dev" )
+VERSIONS=( "php-5.6-fpm-t-dev" "php-5.6-fpm-e-dev" "node-12-e-dev" )
 for VERSION in "${VERSIONS[@]}"
 do
   ./build_multiarch.sh $VERSION $ARCH >> /dev/null 2>&1 &
