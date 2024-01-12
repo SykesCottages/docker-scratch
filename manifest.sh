@@ -8,6 +8,7 @@ VERSIONS=( "php-7.0-cli-h-dev" "php-7.0-fpm-h-dev" "php-7.0-supervisor-h-dev" "r
 for VERSION in "${VERSIONS[@]}"
 do
   TAG="sykescottages/scratch:$VERSION"
+  docker manifest rm $TAG
   docker manifest create $TAG \
     --amend "$TAG-amd64" \
     --amend "$TAG-arm64"
