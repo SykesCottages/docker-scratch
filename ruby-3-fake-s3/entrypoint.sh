@@ -7,17 +7,22 @@ if [ $# -gt 0 ]; then
     exit
 fi
 
-PATH=/fakes3
+SET_S3_PATH=/fakes3
 PORT=4569
+LICENSE=test
 
 if [ ! -z "$S3_PATH" ]; then
-  PATH="-r $S3_PATH"
+  $SET_S3_PATH="-r $S3_PATH"
 fi
 
 if [ ! -z "$S3_PORT" ]; then
   PORT="-p $S3_PORT"
 fi
 
-RUN mkdir -p $PATH
+if [ ! -z "$S3_PORT" ]; then
+  PORT="-p $S3_PORT"
+fi
 
-fakes3 -r $PATH -p $PORT $@
+mkdir -p $SET_S3_PATH
+
+fakes3 -r $SET_S3_PATH -p $PORT $@
