@@ -32,4 +32,3 @@ RUN curl -L "https://download.newrelic.com/php_agent/archive/9.2.0.247/newrelic-
     export NR_INSTALL_SILENT=1 && \
      /tmp/newrelic-php5-*/newrelic-install install && \
       rm -rf /tmp/newrelic-php5-* /tmp/nrinstall*
-
