@@ -20,4 +20,4 @@ RUN ln -s /etc/php/7.3/mods-available/redis.ini /etc/php/7.3/cli/conf.d/20-redis
 
 RUN apt-get autoremove -y -q && \
     apt-get autoclean -y -q && \
-    rm -rf /var/lib/apt/lists/* \
+    rm -rf /var/lib/apt/lists/*
