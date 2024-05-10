@@ -8,6 +8,7 @@ RUN apt-get update && \
         php8.3-redis \
         php8.3-gd \
         php8.3-memcache \
+        php8.3-mcrypt \
         php-pear \
         librabbitmq-dev \
         libmcrypt-dev \
