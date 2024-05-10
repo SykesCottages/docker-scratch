@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     php8.3-memcache \
     php8.3-imap \
     php8.3-mailparse \
+    php8.3-mcrypt \
     php-pear \
     librabbitmq-dev \
     libmcrypt-dev
