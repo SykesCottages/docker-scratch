@@ -28,6 +28,7 @@ VERSIONS=(
   "php-8.3-fpm-t-dev"
   "node-10-k-dev"
   "php-7.3-fpm-k-dev"
+  "php-8.3-fpm-p"
 )
 
 for VERSION in "${VERSIONS[@]}"
