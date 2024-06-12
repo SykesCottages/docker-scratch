@@ -30,6 +30,7 @@ VERSIONS=(
   "php-7.3-fpm-k-dev"
   "php-8.3-fpm-p"
   "php-8.3-cli-e"
+  "php-7.0-fpm-h"
 )
 
 for VERSION in "${VERSIONS[@]}"
