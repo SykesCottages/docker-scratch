@@ -14,12 +14,9 @@ itShouldCheckThatAllPhpModulesExists() {
   doesPhpModuleExist date
   doesPhpModuleExist gd
   doesPhpModuleExist intl
-  doesPhpModuleExist imap
   doesPhpModuleExist json
   doesPhpModuleExist ldap
   doesPhpModuleExist mbstring
-  doesPhpModuleExist mailparse
-  doesPhpModuleExist memcache
   doesPhpModuleExist mysqli
   doesPhpModuleExist newrelic
   doesPhpModuleExist openssl
