@@ -24,6 +24,14 @@ VERSIONS=(
   "rabbitmq-3.12"
   "ruby-3-fake-s3"
   "ruby-3-fake-sqs"
+  "php-8.3-cli-h-dev"
+  "php-8.3-fpm-h"
+  "php-8.3-fpm-h-dev"
+  "php-8.3-supervisor-h-dev"
+  "php-8.4-cli-h-dev"
+  "php-8.4-fpm-h"
+  "php-8.4-fpm-h-dev"
+  "php-8.4-supervisor-h-dev"
 )
 
 for VERSION in "${VERSIONS[@]}"
