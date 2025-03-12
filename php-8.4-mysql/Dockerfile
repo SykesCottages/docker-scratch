@@ -13,8 +13,6 @@ RUN apt-get -qq update && \
     php8.4-amqp \
     mysql-client
 
-COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
-
 COPY ./php.ini /etc/php/8.4/cli/
 
 ENV DOCKER=1
