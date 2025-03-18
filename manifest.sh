@@ -32,6 +32,7 @@ VERSIONS=(
   "php-8.4-fpm-h"
   "php-8.4-fpm-h-dev"
   "php-8.4-supervisor-h-dev"
+  "php-8.4-mysql"
 )
 
 for VERSION in "${VERSIONS[@]}"
