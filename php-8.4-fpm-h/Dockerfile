@@ -14,7 +14,7 @@ RUN apt-get update && \
     libonig-dev \
     jq
 
-RUN curl -L "https://download.newrelic.com/php_agent/archive/10.18.0.8/newrelic-php5-10.18.0.8-linux.tar.gz" | tar -C /tmp -zx
+RUN curl -L "https://download.newrelic.com/php_agent/archive/11.7.0.21/newrelic-php5-11.7.0.21-linux.tar.gz" | tar -C /tmp -zx
 
 RUN export NR_INSTALL_USE_CP_NOT_LN=1 \
       && export NR_INSTALL_SILENT=1 \
