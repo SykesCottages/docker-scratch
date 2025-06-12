@@ -15,6 +15,7 @@ itShouldCheckThatAllPhpModulesExists() {
   doesPhpModuleExist mcrypt
   doesPhpModuleExist amqp
   doesPhpModuleExist newrelic
+  doesPhpModuleExist decimal
 }
 
 itShouldMatchTheDesiredVersionOfPhp() {

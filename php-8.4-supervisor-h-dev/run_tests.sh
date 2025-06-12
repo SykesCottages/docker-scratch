@@ -13,6 +13,7 @@ itShouldCheckThatAllPhpModulesExists() {
   doesPhpModuleExist gd
   doesPhpModuleExist mcrypt
   doesPhpModuleExist amqp
+  doesPhpModuleExist decimal
 }
 
 itShouldMatchTheDesiredVersionOfPhp() {

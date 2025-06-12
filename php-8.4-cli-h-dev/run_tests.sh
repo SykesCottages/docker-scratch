@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PHP_VERSION=7.0
+PHP_VERSION=8.4
 
 itShouldCheckThatAllInstalledSoftwareExists() {
     doesCommandExist php
@@ -13,6 +13,7 @@ itShouldCheckThatAllPhpModulesExists() {
   doesPhpModuleExist gd
   doesPhpModuleExist mcrypt
   doesPhpModuleExist amqp
+  doesPhpModuleExist decimal
 }
 
 itShouldMatchTheDesiredVersionOfPhp() {

@@ -3,6 +3,8 @@ FROM sykescottages/php:8.4-fpm-$ARCH
 
 RUN apt-get update && \
     apt-get install -y \
+    libmpdec-dev \
+    php8.4-decimal \
     php8.4-mysql \
     php8.4-mcrypt \
     php8.4-gd \
