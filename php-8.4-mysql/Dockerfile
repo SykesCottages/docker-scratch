@@ -6,6 +6,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get -qq update && \
     apt-get -qq install -y \
+    libmpdec-dev \
+    php8.4-decimal \
     php8.4-mysql \
     php8.4-mcrypt \
     php8.4-gd \
