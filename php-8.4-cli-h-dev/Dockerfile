@@ -14,6 +14,7 @@ RUN apt-get update && \
         php8.4-gd \
         php8.4-ldap \
         php8.4-amqp \
+        php8.4-pcov \
         mysql-client \
         supervisor \
         ansible \
