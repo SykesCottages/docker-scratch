@@ -7,7 +7,7 @@ docker login >> /dev/null 2>&1
 
 if [ "x86_64" == "$ARCH" ]; then
   ARCH=amd64
-elif [ "aarch64" == "$ARCH" ]; then
+elif [ "aarch64" == "$ARCH" ] || [ "arm64" == "$ARCH" ]; then
   ARCH=arm64
 else
   echo "Architecture ${ARCH} not supported."
@@ -45,6 +45,7 @@ VERSIONS=(
   "php-8.4-mysql"
   "php-8.4-cli-e"
   "php-8.4-fpm-e"
+  "mysql-8"
 )
 
 for VERSION in "${VERSIONS[@]}"

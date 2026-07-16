@@ -35,6 +35,7 @@ VERSIONS=(
   "php-8.4-mysql"
   "php-8.4-cli-e"
   "php-8.4-fpm-e"
+  "mysql-8"
 )
 
 for VERSION in "${VERSIONS[@]}"

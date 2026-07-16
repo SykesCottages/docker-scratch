@@ -1,0 +1,14 @@
+[mysqld]
+max_connections = 512
+innodb_flush_log_at_trx_commit = 0
+innodb_buffer_pool_size = 1600M
+innodb_write_io_threads = 16
+innodb_log_buffer_size = 32M
+max_allowed_packet=500m
+sql-mode=""
+default_authentication_plugin=mysql_native_password
+log_bin_trust_function_creators=ON
+innodb_print_all_deadlocks=ON
+performance_schema=OFF
+log_error_suppression_list='MY-013360'
+innodb_redo_log_capacity = 256M
