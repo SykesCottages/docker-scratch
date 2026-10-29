@@ -21,7 +21,7 @@ RUN apt-get update && \
         wget
 
 # New Relic
-RUN curl -L "https://download.newrelic.com/php_agent/archive/12.1.0.26/newrelic-php5-12.1.0.26-linux.tar.gz" | tar -C /tmp -zx && \
+RUN curl -L "https://download.newrelic.com/php_agent/archive/12.12.0.41/newrelic-php5-12.12.0.41-linux.tar.gz" | tar -C /tmp -zx && \
    export NR_INSTALL_USE_CP_NOT_LN=1 && \
    export NR_INSTALL_SILENT=1 && \
    /tmp/newrelic-php5-*/newrelic-install install && \
