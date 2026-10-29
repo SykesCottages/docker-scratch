@@ -25,9 +25,7 @@ RUN curl -L "https://download.newrelic.com/php_agent/archive/12.12.0.41/newrelic
    export NR_INSTALL_USE_CP_NOT_LN=1 && \
    export NR_INSTALL_SILENT=1 && \
    /tmp/newrelic-php5-*/newrelic-install install && \
-   rm -rf /tmp/newrelic-php5-* /tmp/nrinstall* && \
-   mv /etc/php/8.4/cli/conf.d/newrelic.ini /etc/php/8.4/mods-available/newrelic.ini && \
-   ln -s /etc/php/8.4/mods-available/newrelic.ini /etc/php/8.4/cli/conf.d/20-newrelic.ini
+   rm -rf /tmp/newrelic-php5-* /tmp/nrinstall*
 
 # WK HTML to PDF
 RUN curl https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz -LJO && \
