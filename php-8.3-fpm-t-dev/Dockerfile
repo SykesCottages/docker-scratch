@@ -1,7 +1,9 @@
 ARG ARCH=amd64
 FROM sykescottages/php:8.3-fpm-$ARCH
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y \
     php8.3-ldap \
     php8.3-redis \
     php8.3-gd \
